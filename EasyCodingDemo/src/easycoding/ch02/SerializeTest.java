@@ -12,7 +12,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -26,11 +25,21 @@ public class SerializeTest {
     
     public static void main(String[] args) {
 //        Person person = new Person("A", 1);
-//        
 //        F_PATH = savePersonToFile(person);
+//        
+//        Person readPerson = readPersonFromFile(F_PATH);
+//        System.out.println("read Person == " + readPerson.toString());
         
-        Person readPerson = readPersonFromFile(F_PATH);
-        System.out.println("read Person == " + readPerson.toString());
+        
+        Student student = new Student("S1", 10, 5);
+        student.setScore(100);
+
+        String studentPath = savePersonToFile(student);
+        Student readStudent = (Student) readPersonFromFile(studentPath);
+        System.out.println("read student name == " + readStudent.getName());
+        System.out.println("read student grade == " + readStudent.getGrade());
+        System.out.println("read student score == " + readStudent.getScore());
+
     }
     
     public static String savePersonToFile(Person person) {
@@ -48,8 +57,6 @@ public class SerializeTest {
             
             objectOutputStream.writeObject(person);
             System.out.println("person file path: " + personFile.getAbsolutePath());
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(SerializeTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
@@ -70,30 +77,6 @@ public class SerializeTest {
             e.printStackTrace();
         }
         return person;
-    }
-    
-    
-    static class Person implements Serializable {
-
-        private static final long serialVersionUID = 1L;
-        private String name;
-//        private int age;
-        private String gender;
-
-        public Person(String name, String gender) {
-            this.name = name;
-            this.gender = gender;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        @Override
-        public String toString() {
-            return "name == " + name + ", gender == " + gender;
-        }
-
-    }
+    }   
 }
 
