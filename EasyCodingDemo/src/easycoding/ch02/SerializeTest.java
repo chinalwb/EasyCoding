@@ -7,7 +7,6 @@ package easycoding.ch02;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -37,12 +36,13 @@ public class SerializeTest {
         String studentPath = savePersonToFile(student);
         Student readStudent = (Student) readPersonFromFile(studentPath);
         System.out.println("read student name == " + readStudent.getName());
+        System.out.println("read student age == " + readStudent.getAge());
         System.out.println("read student grade == " + readStudent.getGrade());
         System.out.println("read student score == " + readStudent.getScore());
 
     }
     
-    public static String savePersonToFile(Person person) {
+    public static String savePersonToFile(Student person) {
         File personFile = new File(person.getName());
         if (personFile.exists()) {
             personFile.delete();
@@ -64,11 +64,11 @@ public class SerializeTest {
         return personFile.getAbsolutePath();
     }
 
-    private static Person readPersonFromFile(String filePath) {
+    private static Student readPersonFromFile(String filePath) {
         File personFile = new File(filePath);
-        Person person = null;
+        Student student = null;
         try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(personFile));) {
-            person = (Person) objectInputStream.readObject();
+            student = (Student) objectInputStream.readObject();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -76,7 +76,7 @@ public class SerializeTest {
         } catch (ClassCastException e) {
             e.printStackTrace();
         }
-        return person;
+        return student;
     }   
 }
 
