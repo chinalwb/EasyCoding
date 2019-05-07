@@ -2,6 +2,10 @@
 
 ![封面](./notes/cover.jpg)
 
+### Tools
+- javap -c -v X.class
+- [Hex Friend](https://ridiculousfish.com/hexfiend/)
+
 ### 第一章 [计算机基础](./notes/ch01.md)
 
 ---
