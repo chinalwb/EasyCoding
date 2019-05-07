@@ -14,10 +14,14 @@ import java.io.Serializable;
 public class Student extends Person implements Serializable {
 //    private static String SCHOOL = "XX_SCHOOL";
     
+    private static final long serialVersionUID = 2;
+    
     private int grade;
     
+    private String address = "BJ";
+    
     public Student(String name, int age, int grade) {
-//        super(name, age);
+        super(name, age);
         this.grade = grade;
     }
 

@@ -20,7 +20,7 @@ import java.util.logging.Logger;
  */
 public class SerializeTest {
     
-    private static String F_PATH = "/Users/wliu/Documents/Android/GitHub/EasyCoding/EasyCodingDemo/A";
+    private static String F_PATH = "/Users/wliu/Documents/Android/GitHub/EasyCoding/EasyCodingDemo/S1";
     
     public static void main(String[] args) {
 //        Person person = new Person("A", 1);

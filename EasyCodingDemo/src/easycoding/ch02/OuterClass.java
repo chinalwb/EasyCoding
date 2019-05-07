@@ -5,6 +5,11 @@
  */
 package easycoding.ch02;
 
+import java.io.Externalizable;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
+
 /**
  *
  * @author wliu
@@ -34,7 +39,7 @@ public class OuterClass {
     
     // instance inner class
     // Can access to OuterClass's all types fields
-    class InstanceInnerClass {
+    class InstanceInnerClass implements Externalizable {
         // cannot declare a static variable within an instance inner class
         // private static int instance_inner_static = 0;
         
@@ -55,6 +60,16 @@ public class OuterClass {
         
         void foo() {
             System.out.println("I am foo() in InstanceInnerClass");
+        }
+
+        @Override
+        public void writeExternal(ObjectOutput out) throws IOException {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        @Override
+        public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     }
     

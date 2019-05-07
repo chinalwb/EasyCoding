@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author wliu
  */
-public class Person {
+public class Person implements Serializable {
 
     private static final long serialVersionUID = 1L;
     private String name;
@@ -22,10 +22,10 @@ public class Person {
         System.out.println("Person default constructor!!");
     }
     
-//    public Person(String name,  int age) {
-//        this.name = name;
-//        this.age = age;
-//    }
+    public Person(String name,  int age) {
+        this.name = name;
+        this.age = age;
+    }
 
     public String getName() {
         return name;
