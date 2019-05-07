@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package easycoding.ch02;
+package easycoding.ch02.innerclass;
 
 import java.io.Externalizable;
 import java.io.IOException;
