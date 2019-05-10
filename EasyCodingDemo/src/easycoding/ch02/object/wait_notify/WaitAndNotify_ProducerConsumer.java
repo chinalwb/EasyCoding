@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package easycoding.ch02.object;
+package easycoding.ch02.object.wait_notify;
 
 import java.util.ArrayList;
 import java.util.List;
