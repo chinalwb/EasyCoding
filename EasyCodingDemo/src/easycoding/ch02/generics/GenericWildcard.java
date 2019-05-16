@@ -17,4 +17,6 @@ public class GenericWildcard {
         List<?> xList = new ArrayList<Object>();
         // xList.add("x");
     }
+    
+    
 }

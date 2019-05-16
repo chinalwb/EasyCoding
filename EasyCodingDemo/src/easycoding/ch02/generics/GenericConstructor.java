@@ -17,6 +17,7 @@ public class GenericConstructor<T, E> {
     }
     
     public <E> E doSomething(E[] eArr) {
+        java.util.Collection c;
         return eArr[0];
     }
 }
