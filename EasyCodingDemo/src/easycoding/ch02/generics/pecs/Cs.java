@@ -15,24 +15,35 @@ import java.util.ArrayList;
 public class Cs {
 
     public static void main(String[] args) {
-        List<Apple> applesList = new ArrayList<Apple>();
-        applesList.add(new Apple());
-        applesList.add(new AsianApple());
-
-        // 不能添加元素
-        List<? extends Apple> peList = applesList;
-        doSomethingForPeList(peList);
-
-        // 可以添加元素 但是讀取出來的是 object -- 泛型丢失
+        List<Apple> applesList = new ArrayList<>();
+        // 可以添加元素 但是读取出來的是 object -- 泛型丢失
         List<? super Apple> csList = applesList;
-
         // 添加进去的都是 extends Apple 的类
         csList.add(new AsianApple());
         csList.add(new Apple());
+        List xList = csList;
+        xList.add("!");
         
-        List<Fruit> asianApples = new ArrayList<>();
-        // peList = asianApples;
-        csList = asianApples;
+        
+        List<? extends Apple> peList = applesList;
+//        peList.add(new Apple());
+        xList = peList;
+        xList.add("1");
+        for (Apple a : peList) {
+            System.out.println("a == " + a);
+        }
+        
+//        csList.stream().map((obj) -> (Apple) obj).forEachOrdered((apple) -> {
+//            System.out.println("apple == " + apple);
+//        });
+        
+//        List<Fruit> asianApples = new ArrayList<>();
+//        // peList = asianApples;
+//        csList = asianApples;
+
+        // 不能添加元素
+//        List<? extends Apple> peList = applesList;
+//        doSomethingForPeList(peList);
 
         // ceList.add(new Fruit()); // compiler error
 //        csMethodAddAll(ceList, new Fruit());

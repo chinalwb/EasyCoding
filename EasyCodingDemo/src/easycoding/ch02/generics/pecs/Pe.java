@@ -19,12 +19,12 @@ public class Pe {
         List<Fruit> fruitsList = new ArrayList<Fruit>();
         fruitsList.add(new Apple());
         fruitsList.add(new Fruit());
-        List<? extends Fruit> peList = fruitsList;
+        List<? extends Object> peList = fruitsList;
         // error because <? extends T> doesn't allow to put in elements 
-        // peList.add(new Apple());
-        for (Fruit f : peList) {
-            System.out.println("f == " + f);
-        }
+//         peList.add(new Apple());
+//        for (Fruit f : peList) {
+//            System.out.println("f == " + f);
+//        }
     }
     
     /**
