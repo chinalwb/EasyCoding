@@ -20,7 +20,7 @@
 
 
 
-### 第四章 [JVM](./notes/ch03.md)
+### 第四章 [JVM](./notes/ch04.md)
 
 ------
 
