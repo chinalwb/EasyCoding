@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package easycoding.ch04.classLoader;
+package easycoding.ch04.classLoader.urlClassLoaderDemo;
 
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
