@@ -17,13 +17,22 @@ import java.io.InputStream;
 public class MyClassLoader extends ClassLoader {
 
     private final String loadDir;
-    
+
     public MyClassLoader(String loadDir) {
         this.loadDir = loadDir;
     }
-    
+
+//    @Override
+//    public Class<?> loadClass(String name) throws ClassNotFoundException {
+//        System.out.println("in loadClass");
+//        Class c = super.loadClass(name);
+//        System.out.println("c == " + c);
+//        return c;
+//    }
+
     @Override
     protected Class<?> findClass(String name) throws ClassNotFoundException {
+        System.out.println("in findClass");
         byte[] bytes = loadClassBytes(name);
         if (bytes == null) {
             System.err.println("Bytes is null");
@@ -31,7 +40,7 @@ public class MyClassLoader extends ClassLoader {
         }
         return defineClass(name, bytes, 0, bytes.length);
     }
-    
+
     private byte[] loadClassBytes(String className) {
         String classPath = className.replaceAll("\\.", "/") + ".class";
         String loadPath = this.loadDir + "/" + classPath;

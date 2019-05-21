@@ -13,11 +13,11 @@ import java.lang.reflect.Method;
  *
  * @author wliu
  */
-public class CustomerClassLoaderDemo {
+public class MyClassLoaderDemo {
     public static void main(String[] args) {
         MyClassLoader myClassLoader = new MyClassLoader(Constants.LOAD_PATH);
         try {
-            Class<?> clazzA = myClassLoader.findClass("easycoding.ch04.classLoader.A");
+            Class<?> clazzA = myClassLoader.loadClass("easycoding.ch04.classLoader.A");
             Object object = clazzA.newInstance();
             Method method = clazzA.getMethod("test");
             method.invoke(object);
