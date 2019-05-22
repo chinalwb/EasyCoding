@@ -20,7 +20,7 @@ import java.lang.reflect.Method;
 public class DecryptClassLoaderDemo {
     public static void main(String[] args) throws Exception {
         DecryptClassLoader classLoader = new DecryptClassLoader();
-        Class clazz = classLoader.loadClass("easycoding.ch04.classLoader.A_Encrypted", false);
+        Class clazz = classLoader.findClass("easycoding.ch04.classLoader.A_Encrypted");
         if (clazz != null) {
             Object object = clazz.newInstance();
             Method method = clazz.getMethod("test");
@@ -29,11 +29,11 @@ public class DecryptClassLoaderDemo {
 
         // 第二次加载类, 直接从 findLoadedClass 方法中就找到了.
         // 不必再调用 findClass 方法进行类的解密
-        Class clazz2 = classLoader.loadClass("easycoding.ch04.classLoader.A_Encrypted", false);
-        if (clazz2 != null) {
-            Object object = clazz2.newInstance();
-            Method method = clazz2.getMethod("test");
-            method.invoke(object);
-        }
+//        Class clazz2 = classLoader.loadClass("easycoding.ch04.classLoader.A_Encrypted", false);
+//        if (clazz2 != null) {
+//            Object object = clazz2.newInstance();
+//            Method method = clazz2.getMethod("test");
+//            method.invoke(object);
+//        }
     }
 }

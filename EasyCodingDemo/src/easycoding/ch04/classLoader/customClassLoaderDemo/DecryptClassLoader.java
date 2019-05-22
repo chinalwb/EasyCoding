@@ -73,7 +73,7 @@ public class DecryptClassLoader extends ClassLoader {
     }
 
     @Override
-    protected Class<?> findClass(String name) throws ClassNotFoundException {
+    public Class<?> findClass(String name) throws ClassNotFoundException {
 //        if (name.contains("A_")) {
 //            byte[] bytes = loadClassBytes(name);
 //            if (bytes == null) {
