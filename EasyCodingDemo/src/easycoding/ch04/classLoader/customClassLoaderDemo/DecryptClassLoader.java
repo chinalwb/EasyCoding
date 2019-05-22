@@ -20,7 +20,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 /**
  * 自定义类加载器, 加载运行时目录下的加密文件.
- * 
+ *
  * @author wliu
  */
 public class DecryptClassLoader extends ClassLoader {
@@ -40,11 +40,24 @@ public class DecryptClassLoader extends ClassLoader {
             if (c != null) {
                 return c;
             }
+
             try {
                 c = findClass(name);
             } catch (Exception e) {
                 // e.printStackTrace();
             }
+            
+            if (c != null) {
+                return c;
+            }
+
+            if (getParent() != null) {
+                c = getParent().loadClass(name);
+            }
+            if (c != null) {
+                return c;
+            }
+
             if (c == null) {
                 c = findSystemClass(name);
             }
@@ -61,16 +74,22 @@ public class DecryptClassLoader extends ClassLoader {
 
     @Override
     protected Class<?> findClass(String name) throws ClassNotFoundException {
-        if (name.contains("A_")) {
-            byte[] bytes = loadClassBytes(name);
-            if (bytes == null) {
-                System.err.println("Cannot find class");
-                return null;
-            }
-            return defineClass(name, bytes, 0, bytes.length);
+//        if (name.contains("A_")) {
+//            byte[] bytes = loadClassBytes(name);
+//            if (bytes == null) {
+//                System.err.println("Cannot find class");
+//                return null;
+//            }
+//            return defineClass(name, bytes, 0, bytes.length);
+//        }
+//
+//        return null;
+        byte[] bytes = loadClassBytes(name);
+        if (bytes == null) {
+            System.err.println("Cannot find class");
+            return null;
         }
-
-        return null;
+        return defineClass(name, bytes, 0, bytes.length);
     }
 
     private byte[] loadClassBytes(String name) {

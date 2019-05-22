@@ -12,6 +12,7 @@ import java.net.URL;
 import java.net.URLClassLoader;
 
 import java.lang.reflect.Method;
+import java.net.URI;
 
 /**
  * 从指定目录下加载一个 class 文件
@@ -29,25 +30,19 @@ public class LoadFromSpecificFilePath {
     public static void main(String[] args) {
         try {
             File loadDir = new File(LOAD_PATH);
-            URL loadUrl = loadDir.toURI().toURL();
+            // 从本地加载
+            URI uri = loadDir.toURI();
+            
+            // 从网络加载
+            // URI uri = new URI("http://localhost/myweb/easycoding.jar");
             URL[] urls = new URL[1];
-            urls[0] = loadUrl;
-            ClassLoader classLoader = new URLClassLoader(urls, null);
+            urls[0] = uri.toURL();
+            URLClassLoader classLoader = new URLClassLoader(urls, LoadFromSpecificFilePath.class.getClassLoader());
             Class clazz = classLoader.loadClass("easycoding.ch04.classLoader.A");
             Object aObject = clazz.newInstance();
             Method method = clazz.getMethod("test", null);
             method.invoke(aObject, null);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

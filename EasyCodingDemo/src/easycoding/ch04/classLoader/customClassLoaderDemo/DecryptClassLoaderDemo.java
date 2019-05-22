@@ -26,5 +26,14 @@ public class DecryptClassLoaderDemo {
             Method method = clazz.getMethod("test");
             method.invoke(object);
         }
+
+        // 第二次加载类, 直接从 findLoadedClass 方法中就找到了.
+        // 不必再调用 findClass 方法进行类的解密
+        Class clazz2 = classLoader.loadClass("easycoding.ch04.classLoader.A_Encrypted", false);
+        if (clazz2 != null) {
+            Object object = clazz2.newInstance();
+            Method method = clazz2.getMethod("test");
+            method.invoke(object);
+        }
     }
 }
