@@ -26,6 +26,7 @@ public class DesEncryptClass {
         FileInputStream fileInputStream = new FileInputStream(KEY_NAME);
         int num = fileInputStream.available();
         byte[] keyBytes = new byte[num];
+        System.out.println("keyBytes len == " + keyBytes.length);
         fileInputStream.read(keyBytes);
         SecretKeySpec key = new SecretKeySpec(keyBytes, "DESede");
 
