@@ -4,6 +4,8 @@
 
 ### Tools
 - javap -c -v X.class
+- jar -cvf easycoding.jar easycoding (jar -cvf <Jar_Name> <Dir_Name>)
+- sudo apachectl start (/Library/WebServer/Documents/)
 - [Hex Friend](https://ridiculousfish.com/hexfiend/)
 
 ### 第一章 [计算机基础](./notes/ch01.md)
