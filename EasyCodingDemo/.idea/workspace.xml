@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e73c050-fbcf-46ae-a9e2-a35829bcf912" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/easycoding/ch04/newInstance/FromClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/easycoding/ch04/newInstance/MyClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/easycoding/ch04/newInstance/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/easycoding/ch07/threadLocal/ThreadLocalDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/easycoding/ch05/Exceptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/easycoding/ch05/IllegalAgeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../notes/CH05-ExceptionsAndLog.xmind" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../notes/CH05-guideline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../notes/CH05-异常和日志.xmind" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../notes/ch05.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../notes/ch04.md" beforeDir="false" afterPath="$PROJECT_DIR$/../notes/ch04.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,39 +20,38 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/easycoding/ch05/Exceptions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="601">
+              <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/easycoding/ch04/newInstance/MyClass.java">
+        <entry file="file://$PROJECT_DIR$/src/easycoding/ch05/IllegalAgeException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            <state relative-caret-position="110">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+              <folding>
+                <element signature="e#123#124#0" expanded="true" />
+                <element signature="e#146#147#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/easycoding/ch04/newInstance/Person.java">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/Throwable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/lang/Object.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="211" column="28" selection-start-line="211" selection-start-column="28" selection-end-line="211" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/easycoding/ch04/newInstance/FromClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="243">
+              <caret line="265" column="21" selection-start-line="265" selection-start-column="8" selection-end-line="265" selection-end-column="21" />
+              <folding>
+                <element signature="e#15711#15712#0" expanded="true" />
+                <element signature="e#15747#15748#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,6 +69,7 @@
     <findStrings>
       <find>contextClassLoader</find>
       <find>threadLocals</find>
+      <find>detailMessage</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -92,10 +93,14 @@
         <option value="$PROJECT_DIR$/src/easycoding/ch04/newInstance/FromClass.java" />
         <option value="$PROJECT_DIR$/src/easycoding/ch04/newInstance/Person.java" />
         <option value="$PROJECT_DIR$/src/easycoding/ch04/newInstance/MyClass.java" />
+        <option value="$PROJECT_DIR$/src/easycoding/ch05/LockFinally.java" />
+        <option value="$PROJECT_DIR$/src/easycoding/ch05/MyException.java" />
+        <option value="$PROJECT_DIR$/src/easycoding/ch05/Exceptions.java" />
+        <option value="$PROJECT_DIR$/src/easycoding/ch05/IllegalAgeException.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="40" />
     <option name="y" value="45" />
     <option name="width" value="1400" />
@@ -131,15 +136,7 @@
               <item name="EasyCodingDemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="easycoding" type="462c0819:PsiDirectoryNode" />
-              <item name="ch04" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyCodingDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyCodingDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="easycoding" type="462c0819:PsiDirectoryNode" />
-              <item name="ch04" type="462c0819:PsiDirectoryNode" />
-              <item name="newInstance" type="462c0819:PsiDirectoryNode" />
+              <item name="ch05" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -150,6 +147,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -167,13 +165,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FromClass">
-    <configuration name="ByPathDecryptClassLoaderDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="easycoding.ch04.classLoader.customClassLoaderDemo.ByPathDecryptClassLoaderDemo" />
+  <component name="RunManager" selected="Application.Exceptions">
+    <configuration name="Exceptions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="easycoding.ch05.Exceptions" />
       <module name="EasyCodingDemo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="easycoding.ch04.classLoader.customClassLoaderDemo.*" />
+          <option name="PATTERN" value="easycoding.ch05.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -235,11 +233,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Exceptions" />
         <item itemvalue="Application.FromClass" />
         <item itemvalue="Application.ThreadContextClassLoaderDemo" />
         <item itemvalue="Application.FileSystemClassLoaderDemo" />
         <item itemvalue="Application.LoadFromSpecificFilePath" />
-        <item itemvalue="Application.ByPathDecryptClassLoaderDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -257,10 +255,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="45" width="1400" height="797" extended-state="0" />
+    <frame x="0" y="0" width="2048" height="1152" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26435935" />
+      <window_info id="Learn" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26753506" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -269,7 +268,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3283161" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -277,7 +276,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32907802" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3248227" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32455316" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -316,23 +315,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/lang/Runnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/easycoding/ch04/A.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#357#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/lang/Runnable.java" />
+    <entry file="file://$PROJECT_DIR$/build/easycoding/ch04/A.class" />
     <entry file="file://$PROJECT_DIR$/build/easycoding/ch04/classLoader/A.class" />
     <entry file="file://$PROJECT_DIR$/src/easycoding/ch04/classLoader/A.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -342,36 +326,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/easycoding/ch04/classLoader/A_Encrypted.class" />
-    <entry file="file://$PROJECT_DIR$/build/easycoding/ch04/classLoader/ClassLoaderParentsDemo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#589#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/easycoding/ch04/classLoader/urlClassLoaderDemo/LoadFromSpecificFilePath.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#1184#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/easycoding/ch04/classLoader/fileSystemClassLoader/FileSystemClassLoaderDemo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#960#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/build/easycoding/ch04/classLoader/ClassLoaderParentsDemo.class" />
+    <entry file="file://$PROJECT_DIR$/build/easycoding/ch04/classLoader/urlClassLoaderDemo/LoadFromSpecificFilePath.class" />
+    <entry file="file://$PROJECT_DIR$/build/easycoding/ch04/classLoader/fileSystemClassLoader/FileSystemClassLoaderDemo.class" />
     <entry file="file://$PROJECT_DIR$/src/easycoding/ch04/classLoader/urlClassLoaderDemo/LoadFromSpecificFilePath.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -445,56 +402,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/lang/Thread.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/lang/ThreadLocal.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/lang/Cloneable.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/lang/Object.java" />
+    <entry file="file://$PROJECT_DIR$/src/easycoding/ch04/newInstance/MyClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="182" lean-forward="true" selection-start-line="182" selection-end-line="182" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/lang/ThreadLocal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="437" column="29" lean-forward="true" selection-start-line="430" selection-end-line="445" selection-end-column="9" />
-          <folding>
-            <element signature="e#7765#7766#0" expanded="true" />
-            <element signature="e#7802#7803#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/lang/Cloneable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="52" column="28" lean-forward="true" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/easycoding/ch04/newInstance/FromClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="211" column="28" selection-start-line="211" selection-start-column="28" selection-end-line="211" selection-end-column="28" />
+        <state relative-caret-position="286">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/easycoding/ch04/newInstance/Person.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="220">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/easycoding/ch04/newInstance/MyClass.java">
+    <entry file="file://$PROJECT_DIR$/src/easycoding/ch04/newInstance/FromClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        <state relative-caret-position="352">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/StampedLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/easycoding/ch05/LockFinally.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/Lock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="181" column="24" lean-forward="true" selection-start-line="181" selection-start-column="24" selection-end-line="181" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/easycoding/ch05/Exceptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/Throwable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="265" column="21" selection-start-line="265" selection-start-column="8" selection-end-line="265" selection-end-column="21" />
+          <folding>
+            <element signature="e#15711#15712#0" expanded="true" />
+            <element signature="e#15747#15748#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/easycoding/ch05/IllegalAgeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding>
+            <element signature="e#123#124#0" expanded="true" />
+            <element signature="e#146#147#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
