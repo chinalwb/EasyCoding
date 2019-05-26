@@ -27,3 +27,12 @@
 ------
 
 ![大纲](./notes/CH04-guideline.png)
+
+
+
+### 第五章 [异常和日志](./notes/ch05.md)
+
+![异常和日志大纲](./notes/CH05-guideline.png)
+
+
+
