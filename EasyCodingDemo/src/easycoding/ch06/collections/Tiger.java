@@ -1,12 +1,13 @@
 package easycoding.ch06.collections;
 
-public class KittyCat extends Cat {
-    public KittyCat(String name, float weight) {
+public class Tiger extends Animal {
+
+    public Tiger(String name, float weight) {
         super(name, weight);
     }
 
     @Override
     public String getType() {
-        return "KittyCat";
+        return "Tiger";
     }
 }
