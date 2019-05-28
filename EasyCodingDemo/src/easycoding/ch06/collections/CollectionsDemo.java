@@ -1,13 +1,12 @@
 package easycoding.ch06.collections;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
 public class CollectionsDemo {
     public static void main(String[] args) {
-        List<? super Animal> animalsList = new ArrayList<>(8);
+        List<Animal> animalsList = new ArrayList<>(8);
         animalsList.add(new Cat("A2", 1.2f));
         animalsList.add(new Cat("A1", 1.1f));
         animalsList.add(new Cat("A5", 1.5f));
@@ -20,13 +19,13 @@ public class CollectionsDemo {
 
         Collections.sort(animalsList);
 
-        System.out.println(">>>>> Sorting...");
+        System.out.println("Sorting... >>>>");
 
         printList(animalsList);
     }
 
-    private static void printList(List<? super Animal> animals) {
-        for (Object  : animals) {
+    private static void printList(List<? extends Animal> animals) {
+        for (Animal animal : animals) {
             System.out.println(animal);
         }
     }
