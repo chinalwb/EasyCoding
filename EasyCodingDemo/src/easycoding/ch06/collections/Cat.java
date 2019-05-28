@@ -3,7 +3,7 @@ package easycoding.ch06.collections;
 import java.util.Collections;
 
 public class Cat extends Animal {
-    Cat(String name, float weight) {
+    public Cat(String name, float weight) {
         super(name, weight);
     }
 

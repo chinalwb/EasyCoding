@@ -1,6 +1,6 @@
 package easycoding.ch06.collections;
 
-public abstract class Animal implements Comparable<Animal> {
+public class Animal implements Comparable<Animal> {
 
     private String name;
     private float weight;
@@ -15,7 +15,9 @@ public abstract class Animal implements Comparable<Animal> {
         return this.weight > animal.weight ? 1 : this.weight == animal.weight ? 0 : -1;
     }
 
-    public abstract String getType();
+    public String getType() {
+        return "Unknown";
+    }
 
     @Override
     public String toString() {
