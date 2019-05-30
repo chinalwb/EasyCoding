@@ -9,10 +9,6 @@ import java.util.concurrent.CopyOnWriteArraySet;
 public class CowDemo {
     public static void main(String[] args) {
 
-        Set set;
-
-        CopyOn
-
         List<Long> copy = new CopyOnWriteArrayList<>();
 
         long start = System.nanoTime();
