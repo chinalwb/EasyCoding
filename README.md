@@ -34,5 +34,7 @@
 
 ![异常和日志大纲](./notes/CH05-guideline.png)
 
+第六章 [数据结构与集合](./notes/ch06.md)
 
+![](./notes/CH06-guideline.png)
 
