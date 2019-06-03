@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package easycoding.ch07;
+package easycoding.ch07.threadpool;
 //1111111111111111111111111111111
 //+ 1
 //=
