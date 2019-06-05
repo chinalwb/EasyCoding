@@ -5,7 +5,7 @@ import java.util.concurrent.*;
 
 /**
  * CountDownLatch 的主要目标是: 让一个线程等待直到其他线程全部完成了要执行的任务.
- *
+ * <p>
  * 继续用 printer 来举例:
  * 现在有 5 个打印任务
  * 3 台打印机
@@ -16,7 +16,7 @@ import java.util.concurrent.*;
  */
 public class CountDownLatchDemo {
     public static void main(String[] args) throws Exception {
-        String[] tasks = new String[] {
+        String[] tasks = new String[]{
                 "Task A",
                 "Task B",
                 "Task C",
@@ -50,8 +50,10 @@ public class CountDownLatchDemo {
                     executorService.submit(new PrintWorker(semaphore, tasks[i], countDownLatch));
                 }
 
-                executorService.shutdown();
                 try {
+//                    executorService.awaitTermination(1, TimeUnit.SECONDS);
+//                    executorService.shutdownNow();
+                    executorService.shutdown();
                     countDownLatch.await();
                     System.out.println("All print tasks have been done.");
                 } catch (InterruptedException e) {
