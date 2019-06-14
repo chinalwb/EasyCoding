@@ -12,27 +12,28 @@ public class ThreadPoolExecutorRejectTest {
                 TimeUnit.SECONDS,
                 new ArrayBlockingQueue<>(4),
                 (Runnable r) -> new Thread(r),
-                (Runnable r, ThreadPoolExecutor executor) -> {
-                    try {
-                        System.out.println("Rejected ... Keep retrying..");
-                        while (true) {
-                            Thread.sleep(1000);
-                            int qsize = executor.getQueue().size();
-                            System.out.println("queue size now >>> " + qsize);
-                            if (qsize < 4) {
-                                System.out.println("execute runnable");
-                                executor.execute(r);
-                                System.out.println("Shutting down..");
-                                executor.shutdown();
-                                executor.awaitTermination(1000 * 11, TimeUnit.SECONDS);
-                                System.out.println("Shutdown... Done!");
-                                break;
-                            }
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
+                new ThreadPoolExecutor.CallerRunsPolicy()
+//                (Runnable r, ThreadPoolExecutor executor) -> {
+//                    try {
+//                        System.out.println("Rejected ... Keep retrying..");
+//                        while (true) {
+//                            Thread.sleep(1000);
+//                            int qsize = executor.getQueue().size();
+//                            System.out.println("queue size now >>> " + qsize);
+//                            if (qsize < 4) {
+//                                System.out.println("execute runnable");
+//                                executor.execute(r);
+//                                System.out.println("Shutting down..");
+//                                executor.shutdown();
+//                                executor.awaitTermination(1000 * 11, TimeUnit.SECONDS);
+//                                System.out.println("Shutdown... Done!");
+//                                break;
+//                            }
+//                        }
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                }
         );
 
         threadPoolExecutor.execute(new Command("A", 10));
