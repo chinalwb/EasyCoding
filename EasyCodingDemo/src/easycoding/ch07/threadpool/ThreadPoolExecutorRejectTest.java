@@ -1,78 +1,59 @@
 package easycoding.ch07.threadpool;
 
 import java.util.Date;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
-public class ThreadPoolExecutorTest {
+public class ThreadPoolExecutorRejectTest {
     public static void main(String[] args) {
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(
                 2,
                 4,
                 6,
                 TimeUnit.SECONDS,
-                new ArrayBlockingQueue<>(4)
+                new ArrayBlockingQueue<>(4),
+                (Runnable r) -> new Thread(r),
+                (Runnable r, ThreadPoolExecutor executor) -> {
+                    try {
+                        System.out.println("Rejected ... Keep retrying..");
+                        while (true) {
+                            Thread.sleep(1000);
+                            int qsize = executor.getQueue().size();
+                            System.out.println("queue size now >>> " + qsize);
+                            if (qsize < 4) {
+                                System.out.println("execute runnable");
+                                executor.execute(r);
+                                System.out.println("Shutting down..");
+                                executor.shutdown();
+                                executor.awaitTermination(1000 * 11, TimeUnit.SECONDS);
+                                System.out.println("Shutdown... Done!");
+                                break;
+                            }
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
         );
 
-        Runnable monitor = () -> {
-            while (true) {
-                int wc = threadPoolExecutor.getPoolSize();
-                int activeThreadCount = threadPoolExecutor.getActiveCount();
-                long taskCount = threadPoolExecutor.getTaskCount();
-                long completedTaskCount = threadPoolExecutor.getCompletedTaskCount();
-                System.out.println("Thread pool: Worker count == " + wc + " active thread count: " + activeThreadCount + ", total task count: " + taskCount + ", completed task count = " + completedTaskCount);
-                if (activeThreadCount == 0 && taskCount > 0 && taskCount == completedTaskCount) {
-                    System.out.println(">>> Completed all tasks!");
-                    threadPoolExecutor.shutdownNow();
-                    break;
-                }
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-
-//        Thread monitorThread = new Thread(monitor);
-//        monitorThread.start();
-
         threadPoolExecutor.execute(new Command("A", 10));
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        threadPoolExecutor.execute(new Command("B", 4));
+        threadPoolExecutor.execute(new Command("B", 10));
         threadPoolExecutor.execute(new Command("C", 10));
         threadPoolExecutor.execute(new Command("D", 10));
-        threadPoolExecutor.execute(new Command("E",10));
+        threadPoolExecutor.execute(new Command("E", 10));
         threadPoolExecutor.execute(new Command("F", 10));
-
-
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         threadPoolExecutor.execute(new Command("G", 10));
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         threadPoolExecutor.execute(new Command("H", 10));
+        threadPoolExecutor.execute(new Command("I", 10));
 
 
-        System.out.println("Shutdown..");
-        threadPoolExecutor.shutdown();
-        try {
-            threadPoolExecutor.awaitTermination(100 * 1000, TimeUnit.SECONDS);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Shutdown finish..");
+//        System.out.println("Shutdown..");
+//        threadPoolExecutor.shutdown();
+//        try {
+//            threadPoolExecutor.awaitTermination(100 * 1000, TimeUnit.SECONDS);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println("Shutdown finish..");
 
 
     }

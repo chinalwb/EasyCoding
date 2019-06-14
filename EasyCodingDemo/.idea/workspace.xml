@@ -7,8 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e73c050-fbcf-46ae-a9e2-a35829bcf912" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/easycoding/ch07/threadpool/ThreadPoolExecutorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/easycoding/ch07/threadpool/ThreadPoolExecutorKeepAliveTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/easycoding/ch07/threadpool/ThreadPoolExecutorRejectTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/easycoding/ch07/threadpool/ThreadPoolExecutorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/easycoding/ch07/threadpool/ThreadPoolExecutorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/ch07.md" beforeDir="false" afterPath="$PROJECT_DIR$/../notes/ch07.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,45 +22,13 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console_3.groovy">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="30">
-                    <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/lang/Integer.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="139">
-                    <caret line="301" column="39" selection-start-line="301" selection-start-column="25" selection-end-line="301" selection-end-column="39" />
-                    <folding>
-                      <element signature="e#32532#32533#0" expanded="true" />
-                      <element signature="e#32566#32567#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="91" column="38" lean-forward="true" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+            <state relative-caret-position="52">
+              <caret line="1045" column="21" selection-start-line="1045" selection-start-column="21" selection-end-line="1045" selection-end-column="21" />
               <folding>
                 <element signature="e#16690#16691#0" expanded="true" />
                 <element signature="e#16719#16720#0" expanded="true" />
@@ -65,9 +36,10 @@
                 <element signature="e#16801#16802#0" expanded="true" />
                 <element signature="e#16946#16947#0" expanded="true" />
                 <element signature="e#17006#17007#0" expanded="true" />
-                <element signature="e#19124#19132#0" expanded="true" />
                 <element signature="e#25302#25303#0" expanded="true" />
                 <element signature="e#25341#25342#0" expanded="true" />
+                <element signature="e#25532#25533#0" expanded="true" />
+                <element signature="e#25578#25579#0" expanded="true" />
                 <element signature="e#60039#60040#0" expanded="true" />
                 <element signature="e#60075#60076#0" expanded="true" />
               </folding>
@@ -75,16 +47,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/easycoding/ch07/threadpool/ThreadPoolExecutorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="30" column="53" lean-forward="true" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+            <state relative-caret-position="558">
+              <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#588#589#0" expanded="true" />
-                <element signature="e#616#617#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/easycoding/ch07/threadpool/ThreadPoolExecutorRejectTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="557">
+              <caret line="45" column="57" lean-forward="true" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/easycoding/ch07/threadpool/ThreadPoolExecutorKeepAliveTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -115,7 +103,6 @@
       <find>comparator</find>
       <find>q</find>
       <find>comparator =</find>
-      <find>Binary</find>
       <find>beforeExecute</find>
       <find>ctl</find>
       <find>ctl =</find>
@@ -127,6 +114,9 @@
       <find>maximumPoolSize</find>
       <find>addWorker</find>
       <find>full</find>
+      <find>Binary</find>
+      <find>keepAliveTime =</find>
+      <find>keepAliveTime</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -210,6 +200,8 @@
         <option value="$PROJECT_DIR$/src/easycoding/ch07/scheduledexecutorservice/ScheduledExecutorServiceDemo.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console_3.groovy" />
         <option value="$PROJECT_DIR$/src/easycoding/ch07/threadpool/ThreadPoolExecutorTest.java" />
+        <option value="$PROJECT_DIR$/src/easycoding/ch07/threadpool/ThreadPoolExecutorRejectTest.java" />
+        <option value="$PROJECT_DIR$/src/easycoding/ch07/threadpool/ThreadPoolExecutorKeepAliveTest.java" />
       </list>
     </option>
   </component>
@@ -219,11 +211,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="494" />
-    <option name="y" value="-1026" />
-    <option name="width" value="1440" />
-    <option name="height" value="1015" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -302,6 +292,11 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="easycoding.ch07.threadpool" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -314,33 +309,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ThreadPoolExecutorTest">
-    <configuration name="ArrayBlockingQueueDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="easycoding.ch07.blockqueue.ArrayBlockingQueueDemo" />
-      <module name="EasyCodingDemo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="easycoding.ch07.blockqueue.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ExchangerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="easycoding.ch07.exchanger.ExchangerDemo" />
-      <module name="EasyCodingDemo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="easycoding.ch07.exchanger.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.ThreadPoolExecutorKeepAliveTest">
     <configuration name="ExecutorServiceDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="easycoding.ch07.executorservice.ExecutorServiceDemo" />
       <module name="EasyCodingDemo" />
@@ -367,6 +336,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ThreadPoolExecutorKeepAliveTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="easycoding.ch07.threadpool.ThreadPoolExecutorKeepAliveTest" />
+      <module name="EasyCodingDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="easycoding.ch07.threadpool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadPoolExecutorRejectTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="easycoding.ch07.threadpool.ThreadPoolExecutorRejectTest" />
+      <module name="EasyCodingDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="easycoding.ch07.threadpool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ThreadPoolExecutorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="easycoding.ch07.threadpool.ThreadPoolExecutorTest" />
       <module name="EasyCodingDemo" />
@@ -382,11 +377,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ThreadPoolExecutorKeepAliveTest" />
+        <item itemvalue="Application.ThreadPoolExecutorRejectTest" />
         <item itemvalue="Application.ThreadPoolExecutorTest" />
         <item itemvalue="Application.ScheduledExecutorServiceDemo" />
         <item itemvalue="Application.ExecutorServiceDemo" />
-        <item itemvalue="Application.ExchangerDemo" />
-        <item itemvalue="Application.ArrayBlockingQueueDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -424,9 +419,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="494" y="-1026" width="1440" height="1015" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4064171" visible="true" weight="0.30329043" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4064171" visible="true" weight="0.22893773" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -435,7 +431,7 @@
       <window_info id="Learn" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38678223" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33673468" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4171181" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -608,20 +604,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/concurrent/Semaphore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="140" column="2" lean-forward="true" selection-start-line="140" selection-start-column="2" selection-end-line="140" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/easycoding/ch07/semaphore/SemaphoreDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/concurrent/Executors.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -880,17 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/concurrent/ArrayBlockingQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="255" column="39" lean-forward="true" selection-start-line="255" selection-start-column="39" selection-end-line="255" selection-end-column="39" />
-          <folding>
-            <element signature="e#6812#6813#0" expanded="true" />
-            <element signature="e#6849#6850#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -971,13 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console_3.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/easycoding/ch07/scheduledexecutorservice/ScheduledExecutorServiceDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
@@ -1002,13 +966,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/concurrent/BlockingQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="217" column="23" lean-forward="true" selection-start-line="217" selection-start-column="23" selection-end-line="217" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1040,10 +997,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console_3.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/concurrent/BlockingQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="275" column="6" selection-start-line="275" selection-start-column="6" selection-end-line="275" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/concurrent/ArrayBlockingQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="416" column="32" lean-forward="true" selection-start-line="416" selection-start-column="32" selection-end-line="416" selection-end-column="32" />
+          <folding>
+            <element signature="e#6812#6813#0" expanded="true" />
+            <element signature="e#6849#6850#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="91" column="38" lean-forward="true" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+        <state relative-caret-position="52">
+          <caret line="1045" column="21" selection-start-line="1045" selection-start-column="21" selection-end-line="1045" selection-end-column="21" />
           <folding>
             <element signature="e#16690#16691#0" expanded="true" />
             <element signature="e#16719#16720#0" expanded="true" />
@@ -1051,9 +1033,10 @@
             <element signature="e#16801#16802#0" expanded="true" />
             <element signature="e#16946#16947#0" expanded="true" />
             <element signature="e#17006#17007#0" expanded="true" />
-            <element signature="e#19124#19132#0" expanded="true" />
             <element signature="e#25302#25303#0" expanded="true" />
             <element signature="e#25341#25342#0" expanded="true" />
+            <element signature="e#25532#25533#0" expanded="true" />
+            <element signature="e#25578#25579#0" expanded="true" />
             <element signature="e#60039#60040#0" expanded="true" />
             <element signature="e#60075#60076#0" expanded="true" />
           </folding>
@@ -1062,13 +1045,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/easycoding/ch07/threadpool/ThreadPoolExecutorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="30" column="53" lean-forward="true" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+        <state relative-caret-position="558">
+          <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#588#589#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/easycoding/ch07/threadpool/ThreadPoolExecutorRejectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="45" column="57" lean-forward="true" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/easycoding/ch07/threadpool/ThreadPoolExecutorKeepAliveTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
         </state>
       </provider>
     </entry>
